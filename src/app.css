@@ -27,3 +27,19 @@ html {
 .white-shadow:hover {
     filter: drop-shadow(0 0 2.5px #fff);
 }
+
+.white-shadow-nh {
+    filter: drop-shadow(0 0 2.5px #fff);
+}
+
+.trans-shadow-blue:hover {
+    filter: drop-shadow(0 0 5px #5bcefa);
+}
+
+.trans-shadow-pink:hover {
+    filter: drop-shadow(0 0 2.5px #f5a9b8);
+}
+
+.trans-shadow-white:hover {
+    filter: drop-shadow(0 0 2.5px #fff);
+}

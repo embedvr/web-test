@@ -376,40 +376,59 @@
 			<div class="flex flex-row justify-center gap-6">
 				<!-- 400 x 300 image placeholder -->
 				<div
-					class="projectCard flex flex-col items-center justify-center border border-white">
+					class="projectCard s flex flex-col items-center justify-center shadow-lg shadow-zinc-900 transition-all hover:-rotate-3 hover:shadow-trans-blue">
 					<img
-						src="https://via.placeholder.com/400x300"
+						src="https://via.placeholder.com/300x200"
 						alt="placeholder"
-						class="h-60 w-80" />
-					<h1 class="text-4xl">Project Name</h1>
-					<h2 class="text-2xl">Project Description</h2>
+						class="w-80" />
+					<div class="justify-startpy-4 flex w-full flex-col items-start px-4">
+						<h1 class="text-4xl">Project Name</h1>
+						<h2 class="text-xl">Project Description</h2>
+					</div>
 				</div>
 				<div
-					class="projectCard flex flex-col items-center justify-center border border-white">
+					class="projectCard s flex flex-col items-center justify-center shadow-lg shadow-zinc-900 transition-all hover:rotate-3 hover:shadow-trans-pink">
 					<img
-						src="https://via.placeholder.com/400x300"
+						src="https://via.placeholder.com/300x200"
 						alt="placeholder"
-						class="h-60 w-80" />
-					<h1 class="text-4xl">Project Name</h1>
-					<h2 class="text-2xl">Project Description</h2>
+						class="w-80" />
+					<div class="justify-startpy-4 flex w-full flex-col items-start px-4">
+						<h1 class="text-4xl">Project Name</h1>
+						<h2 class="text-xl">Project Description</h2>
+					</div>
 				</div>
 				<div
-					class="projectCard flex flex-col items-center justify-center border border-white">
+					class="projectCard s flex flex-col items-center justify-center shadow-lg shadow-zinc-900 transition-all hover:-rotate-3 hover:shadow-white">
 					<img
-						src="https://via.placeholder.com/400x300"
+						src="https://via.placeholder.com/300x200"
 						alt="placeholder"
-						class="h-60 w-80" />
-					<h1 class="text-4xl">Project Name</h1>
-					<h2 class="text-2xl">Project Description</h2>
+						class="w-80" />
+					<div class="justify-startpy-4 flex w-full flex-col items-start px-4">
+						<h1 class="text-4xl">Project Name</h1>
+						<h2 class="text-xl">Project Description</h2>
+					</div>
 				</div>
 				<div
-					class="projectCard flex flex-col items-center justify-center border border-white">
+					class="projectCard s flex flex-col items-center justify-center shadow-lg shadow-zinc-900 transition-all hover:rotate-3 hover:shadow-trans-pink">
 					<img
-						src="https://via.placeholder.com/400x300"
+						src="https://via.placeholder.com/300x200"
 						alt="placeholder"
-						class="h-60 w-80" />
-					<h1 class="text-4xl">Project Name</h1>
-					<h2 class="text-2xl">Project Description</h2>
+						class="w-80" />
+					<div class="justify-startpy-4 flex w-full flex-col items-start px-4">
+						<h1 class="text-4xl">Project Name</h1>
+						<h2 class="text-xl">Project Description</h2>
+					</div>
+				</div>
+				<div
+					class="projectCard s flex flex-col items-center justify-center shadow-lg shadow-zinc-900 transition-all hover:-rotate-3 hover:shadow-trans-blue">
+					<img
+						src="https://via.placeholder.com/300x200"
+						alt="placeholder"
+						class="w-80" />
+					<div class="justify-startpy-4 flex w-full flex-col items-start px-4">
+						<h1 class="text-4xl">Project Name</h1>
+						<h2 class="text-xl">Project Description</h2>
+					</div>
 				</div>
 			</div>
 		</div>

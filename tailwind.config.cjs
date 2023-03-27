@@ -10,6 +10,10 @@ module.exports = {
 					osu: '#FF66AA',
 					discord: '#7289DA',
 					mail: '#fff',
+				},
+				trans: {
+					'blue': '#5bcefa',
+					'pink': '#f5a9b8',
 				}
 			},
 			filter: {
