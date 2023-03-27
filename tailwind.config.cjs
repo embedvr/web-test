@@ -2,7 +2,24 @@
 module.exports = {
 	content: ['./src/**/*.{html,js,svelte,ts}'],
 	theme: {
-		extend: {},
+		extend: {
+			colors: {
+				socials: {
+					twitter: '#1DA1F2',
+					github: '#fff',
+					osu: '#FF66AA',
+					discord: '#7289DA',
+					mail: '#fff',
+				}
+			},
+			filter: {
+				"twitter-shadow": "drop-shadow(0 0 2px #1DA1F2)",
+				"github-shadow": "drop-shadow(0 0 2px #fff)",
+				"osu-shadow": "drop-shadow(0 0 2px #FF66AA)",
+				"discord-shadow": "drop-shadow(0 0 2px #7289DA)",
+				"mail-shadow": "drop-shadow(0 0 2px #fff)",
+			}
+		},
 	},
 	plugins: [],
 };

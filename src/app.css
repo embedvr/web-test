@@ -1,3 +1,29 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* "twitter-shadow": "drop-shadow(0 0 2px #1DA1F2)",
+				"github-shadow": "drop-shadow(0 0 2px #fff)",
+				"osu-shadow": "drop-shadow(0 0 2px #FF66AA)",
+				"discord-shadow": "drop-shadow(0 0 2px #7289DA)",
+				"mail-shadow": "drop-shadow(0 0 2px #fff)", */
+
+.twitter-shadow:hover {
+    filter: drop-shadow(0 0 5px #1DA1F2);
+}
+
+.github-shadow:hover {
+    filter: drop-shadow(0 0 5px #fff);
+}
+
+.osu-shadow:hover {
+    filter: drop-shadow(0 0 5px #FF66AA);
+}
+
+.discord-shadow:hover {
+    filter: drop-shadow(0 0 5px #7289DA);
+}
+
+.mail-shadow:hover {
+    filter: drop-shadow(0 0 5px #fff);
+}
