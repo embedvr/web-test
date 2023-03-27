@@ -7,6 +7,13 @@
 	import MdiGithub from '~icons/mdi/github';
 	import SimpleIconsOsu from '~icons/simple-icons/osu';
 	import IcSharpDiscord from '~icons/ic/sharp-discord';
+	import CarbonLogoSvelte from '~icons/carbon/logo-svelte';
+	import SimpleIconsHtml5 from '~icons/simple-icons/html5';
+	import CibCss3Shiled from '~icons/cib/css3-shiled';
+	import SimpleIconsJavascript from '~icons/simple-icons/javascript';
+	import SimpleIconsTypescript from '~icons/simple-icons/typescript';
+	import VscodeIconsFileTypeDeno from '~icons/vscode-icons/file-type-deno';
+	import SimpleIconsCloudflare from '~icons/simple-icons/cloudflare';
 	import MaterialSymbolsMail from '~icons/material-symbols/mail';
 	import gsap from 'gsap';
 	// import Typewriter from 'svelte-typewriter';
@@ -197,6 +204,21 @@
 				end: '+=500px',
 			},
 		});
+		const skills = gsap.utils.toArray('.skill');
+		skills.forEach((skill) => {
+			gsap.to(skill, {
+				y: -100,
+				// random x value between -100 and 100
+				x: 'random(-100, 100)',
+				rotate: 'random(-90, 90)',
+				scrollTrigger: {
+					trigger: '.skill',
+					scrub: true,
+					start: 'bottom bottom',
+					end: 'top top',
+				},
+			});
+		});
 		onscroll = () => {
 			gsap.to('#scrollIcon', {
 				duration: 1,
@@ -372,69 +394,112 @@
 		</div>
 		<div class="flex w-screen flex-col items-center justify-center px-12 py-24">
 			<h1 class="text-6xl">My Skills</h1>
-			<div class="flex flex-row justify-center p-4">
+			<div class="flex flex-col justify-center gap-10 p-4">
 				<div
-					class="h-40 w-32 rounded-xl border-2 border-neutral-700 bg-neutral-800" />
+					class="skill flex h-40 w-32 flex-col items-center justify-evenly rounded-xl border-2 border-neutral-700 bg-neutral-800">
+					<CarbonLogoSvelte class="text-5xl" />
+					<span class="text-3xl">Svelte</span>
+				</div>
+				<div
+					class="skill flex h-40 w-32 flex-col items-center justify-evenly rounded-xl border-2 border-neutral-700 bg-neutral-800">
+					<SimpleIconsHtml5 class="text-5xl" />
+					<span class="text-3xl">HTML</span>
+				</div>
+				<div
+					class="skill flex h-40 w-32 flex-col items-center justify-evenly rounded-xl border-2 border-neutral-700 bg-neutral-800">
+					<CibCss3Shiled class="text-5xl" />
+					<span class="text-3xl">CSS</span>
+				</div>
+				<div
+					class="skill flex h-40 w-32 flex-col items-center justify-evenly rounded-xl border-2 border-neutral-700 bg-neutral-800">
+					<SimpleIconsJavascript class="text-5xl" />
+					<span class="text-2xl">JavaScript</span>
+				</div>
+				<div
+					class="skill flex h-40 w-32 flex-col items-center justify-evenly rounded-xl border-2 border-neutral-700 bg-neutral-800">
+					<SimpleIconsTypescript class="text-5xl" />
+					<span class="text-2xl">TypeScript</span>
+				</div>
+				<div
+					class="skill flex h-40 w-32 flex-col items-center justify-evenly rounded-xl border-2 border-neutral-700 bg-neutral-800">
+					<VscodeIconsFileTypeDeno class="text-5xl" />
+					<span class="text-3xl">Deno</span>
+				</div>
+				<div
+					class="skill flex h-40 w-32 flex-col items-center justify-evenly rounded-xl border-2 border-neutral-700 bg-neutral-800">
+					<SimpleIconsCloudflare class="text-5xl" />
+					<span class="text-xl">CF Workers</span>
+				</div>
+				<div
+					class="skill flex h-40 w-32 flex-col items-center justify-evenly rounded-xl border-2 border-neutral-700 bg-neutral-800">
+					<IcSharpDiscord class="text-5xl" />
+					<span class="text-xl">Discord.js</span>
+				</div>
 			</div>
-		</div>
-		<div
-			class="projectsContainer flex h-screen w-screen flex-col justify-around px-12 py-24">
-			<h1 class="text-6xl">My Projects</h1>
-			<div class="flex flex-row justify-center gap-6">
-				<!-- 400 x 300 image placeholder -->
-				<div
-					class="projectCard flex flex-col items-center justify-center rounded-xl shadow-lg shadow-zinc-900 transition-all hover:-rotate-3 hover:shadow-trans-blue">
-					<img
-						src="https://via.placeholder.com/300x200"
-						alt="placeholder"
-						class="w-full rounded-t-xl" />
-					<div class="flex w-full flex-col items-start justify-start py-4 px-4">
-						<h1 class="text-4xl">Project Name</h1>
-						<h2 class="text-xl">Project Description</h2>
+			<div
+				class="projectsContainer flex h-screen w-screen flex-col justify-around px-12 py-24">
+				<h1 class="text-6xl">My Projects</h1>
+				<div class="flex flex-row justify-center gap-6">
+					<!-- 400 x 300 image placeholder -->
+					<div
+						class="projectCard flex flex-col items-center justify-center rounded-xl shadow-lg shadow-zinc-900 transition-all hover:-rotate-3 hover:shadow-trans-blue">
+						<img
+							src="https://via.placeholder.com/300x200"
+							alt="placeholder"
+							class="w-full rounded-t-xl" />
+						<div
+							class="flex w-full flex-col items-start justify-start py-4 px-4">
+							<h1 class="text-4xl">Project Name</h1>
+							<h2 class="text-xl">Project Description</h2>
+						</div>
 					</div>
-				</div>
-				<div
-					class="projectCard flex flex-col items-center justify-center rounded-xl shadow-lg shadow-zinc-900 transition-all hover:rotate-3 hover:shadow-trans-pink">
-					<img
-						src="https://via.placeholder.com/300x200"
-						alt="placeholder"
-						class="w-full rounded-t-xl" />
-					<div class="flex w-full flex-col items-start justify-start py-4 px-4">
-						<h1 class="text-4xl">Project Name</h1>
-						<h2 class="text-xl">Project Description</h2>
+					<div
+						class="projectCard flex flex-col items-center justify-center rounded-xl shadow-lg shadow-zinc-900 transition-all hover:rotate-3 hover:shadow-trans-pink">
+						<img
+							src="https://via.placeholder.com/300x200"
+							alt="placeholder"
+							class="w-full rounded-t-xl" />
+						<div
+							class="flex w-full flex-col items-start justify-start py-4 px-4">
+							<h1 class="text-4xl">Project Name</h1>
+							<h2 class="text-xl">Project Description</h2>
+						</div>
 					</div>
-				</div>
-				<div
-					class="projectCard flex flex-col items-center justify-center rounded-xl shadow-lg shadow-zinc-900 transition-all hover:-rotate-3 hover:shadow-white">
-					<img
-						src="https://via.placeholder.com/300x200"
-						alt="placeholder"
-						class="w-full rounded-t-xl" />
-					<div class="flex w-full flex-col items-start justify-start py-4 px-4">
-						<h1 class="text-4xl">Project Name</h1>
-						<h2 class="text-xl">Project Description</h2>
+					<div
+						class="projectCard flex flex-col items-center justify-center rounded-xl shadow-lg shadow-zinc-900 transition-all hover:-rotate-3 hover:shadow-white">
+						<img
+							src="https://via.placeholder.com/300x200"
+							alt="placeholder"
+							class="w-full rounded-t-xl" />
+						<div
+							class="flex w-full flex-col items-start justify-start py-4 px-4">
+							<h1 class="text-4xl">Project Name</h1>
+							<h2 class="text-xl">Project Description</h2>
+						</div>
 					</div>
-				</div>
-				<div
-					class="projectCard flex flex-col items-center justify-center rounded-xl shadow-lg shadow-zinc-900 transition-all hover:rotate-3 hover:shadow-trans-pink">
-					<img
-						src="https://via.placeholder.com/300x200"
-						alt="placeholder"
-						class="w-full rounded-t-xl" />
-					<div class="flex w-full flex-col items-start justify-start py-4 px-4">
-						<h1 class="text-4xl">Project Name</h1>
-						<h2 class="text-xl">Project Description</h2>
+					<div
+						class="projectCard flex flex-col items-center justify-center rounded-xl shadow-lg shadow-zinc-900 transition-all hover:rotate-3 hover:shadow-trans-pink">
+						<img
+							src="https://via.placeholder.com/300x200"
+							alt="placeholder"
+							class="w-full rounded-t-xl" />
+						<div
+							class="flex w-full flex-col items-start justify-start py-4 px-4">
+							<h1 class="text-4xl">Project Name</h1>
+							<h2 class="text-xl">Project Description</h2>
+						</div>
 					</div>
-				</div>
-				<div
-					class="projectCard flex flex-col items-center justify-center rounded-xl shadow-lg shadow-zinc-900 transition-all hover:-rotate-3 hover:shadow-trans-blue">
-					<img
-						src="https://via.placeholder.com/300x200"
-						alt="placeholder"
-						class="w-full rounded-t-xl" />
-					<div class="flex w-full flex-col items-start justify-start py-4 px-4">
-						<h1 class="text-4xl">Project Name</h1>
-						<h2 class="text-xl">Project Description</h2>
+					<div
+						class="projectCard flex flex-col items-center justify-center rounded-xl shadow-lg shadow-zinc-900 transition-all hover:-rotate-3 hover:shadow-trans-blue">
+						<img
+							src="https://via.placeholder.com/300x200"
+							alt="placeholder"
+							class="w-full rounded-t-xl" />
+						<div
+							class="flex w-full flex-col items-start justify-start py-4 px-4">
+							<h1 class="text-4xl">Project Name</h1>
+							<h2 class="text-xl">Project Description</h2>
+						</div>
 					</div>
 				</div>
 			</div>
