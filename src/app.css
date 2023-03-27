@@ -7,23 +7,23 @@
 				"osu-shadow": "drop-shadow(0 0 2px #FF66AA)",
 				"discord-shadow": "drop-shadow(0 0 2px #7289DA)",
 				"mail-shadow": "drop-shadow(0 0 2px #fff)", */
-
-.twitter-shadow:hover {
-    filter: drop-shadow(0 0 5px #1DA1F2);
+            
+html {
+    background-color: #000;
 }
 
-.github-shadow:hover {
-    filter: drop-shadow(0 0 5px #fff);
+.twitter-shadow:hover {
+    filter: drop-shadow(0 0 2.5px #1DA1F2);
 }
 
 .osu-shadow:hover {
-    filter: drop-shadow(0 0 5px #FF66AA);
+    filter: drop-shadow(0 0 2.5px #FF66AA);
 }
 
 .discord-shadow:hover {
-    filter: drop-shadow(0 0 5px #7289DA);
+    filter: drop-shadow(0 0 2.5px #7289DA);
 }
 
-.mail-shadow:hover {
-    filter: drop-shadow(0 0 5px #fff);
+.white-shadow:hover {
+    filter: drop-shadow(0 0 2.5px #fff);
 }

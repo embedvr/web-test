@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
 	import { fade } from 'svelte/transition';
-	import UilMouseAlt from '~icons/uil/mouse-alt';
+	import IcOutlineKeyboardArrowDown from '~icons/ic/outline-keyboard-arrow-down';
 	import QuillLoadingSpin from '~icons/quill/loading-spin';
 	import MdiTwitter from '~icons/mdi/twitter';
 	import MdiGithub from '~icons/mdi/github';
@@ -16,6 +16,7 @@
 	let timeline: GSAPTimeline;
 	let loaded = false;
 	let loadAnimFinished = false;
+	let navVisible = false;
 	onMount(() => {
 		loaded = true;
 		timeline = gsap.timeline();
@@ -122,6 +123,12 @@
 				pin: true,
 				start: '',
 				end: '+=500px',
+				onEnterBack: () => {
+					navVisible = false;
+				},
+				onLeave: () => {
+					navVisible = true;
+				},
 			},
 		});
 		onscroll = () => {
@@ -142,6 +149,57 @@
 {/if}
 
 <div class="h-screen w-screen" class:overflow-hidden={!loadAnimFinished}>
+	{#if navVisible}
+		<nav
+			class="fixed top-0 left-0 z-40 h-20 w-full bg-transparent text-white"
+			transition:fade>
+			<div class="flex flex-row items-center justify-between px-6 py-4">
+				<h1 class="white-shadow navItem text-2xl transition-all">embed</h1>
+				<div class="flex flex-row justify-around gap-6">
+					<a
+						href="https://twitter.com/uwunetes"
+						class="navItem"
+						target="_blank"
+						rel="noreferrer">
+						<MdiTwitter
+							class="twitter-shadow h-10 w-10 transition-all hover:text-socials-twitter" />
+					</a>
+					<a
+						href="https://github.com/embedvr"
+						class="navItem"
+						target="_blank"
+						rel="noreferrer">
+						<MdiGithub
+							class="white-shadow h-10 w-10 transition-all hover:text-socials-github" />
+					</a>
+					<a
+						href="https://osu.ppy.sh/users/embed"
+						class="navItem"
+						target="_blank"
+						rel="noreferrer">
+						<SimpleIconsOsu
+							class="osu-shadow h-10 w-10 transition-all hover:text-socials-osu" />
+					</a>
+					<a
+						href="https://discord.id/?prefill=476641014841475084"
+						class="navItem"
+						target="_blank"
+						rel="noreferrer">
+						<IcSharpDiscord
+							class="discord-shadow h-10 w-10 transition-all hover:text-socials-discord" />
+					</a>
+					<a
+						href="mailto:brydon@helium.email"
+						class="navItem"
+						target="_blank"
+						rel="noreferrer">
+						<MaterialSymbolsMail
+							class="white-shadow h-10 w-10 transition-all hover:text-socials-mail" />
+					</a>
+				</div>
+			</div>
+		</nav>
+	{/if}
 	<main class={`h-[6000vh] w-screen bg-black text-white`}>
 		<div class="h-screen w-full">
 			<div
@@ -158,12 +216,18 @@
 					<h1 class="subText text-3xl">
 						{#if loadAnimFinished}
 							<Typewriter autoplay loop>
-								<Text content="web developer" />
-								<Wait duration={2500} />
 								<Text content="web designer" />
-								<Wait duration={2500} />
+								<Wait duration={3500} />
+								<Text content="full stack developer" />
+								<Wait duration={3500} />
+								<Text content="system administrator" />
+								<Wait duration={3500} />
 								<Text content="catgirl enthusiast" />
-								<Wait duration={2500} />
+								<Wait duration={3500} />
+								<Text content="svelte enjoyer" />
+								<Wait duration={3500} />
+								<Text content="web developer" />
+								<Wait duration={3500} />
 							</Typewriter>
 						{:else}
 							web developer
@@ -172,33 +236,52 @@
 				</div>
 				<div class="flex h-full flex-col items-center justify-between pb-10">
 					<div class="flex flex-row justify-around gap-6">
-						<a href="https://twitter.com/uwunetes" class="social">
+						<a
+							href="https://twitter.com/uwunetes"
+							class="social"
+							target="_blank"
+							rel="noreferrer">
 							<MdiTwitter
 								class="twitter-shadow h-10 w-10 transition-all hover:text-socials-twitter" />
 						</a>
-						<a href="https://github.com/embedvr" class="social">
+						<a
+							href="https://github.com/embedvr"
+							class="social"
+							target="_blank"
+							rel="noreferrer">
 							<MdiGithub
-								class="github-shadow h-10 w-10 transition-all hover:text-socials-github" />
+								class="white-shadow h-10 w-10 transition-all hover:text-socials-github" />
 						</a>
-						<a href="https://osu.ppy.sh/users/embed" class="social">
+						<a
+							href="https://osu.ppy.sh/users/embed"
+							class="social"
+							target="_blank"
+							rel="noreferrer">
 							<SimpleIconsOsu
 								class="osu-shadow h-10 w-10 transition-all hover:text-socials-osu" />
 						</a>
 						<a
 							href="https://discord.id/?prefill=476641014841475084"
-							class="social">
+							class="social"
+							target="_blank"
+							rel="noreferrer">
 							<IcSharpDiscord
 								class="discord-shadow h-10 w-10 transition-all hover:text-socials-discord" />
 						</a>
-						<a href="mailto:brydon@helium.email" class="social">
+						<a
+							href="mailto:brydon@helium.email"
+							class="social"
+							target="_blank"
+							rel="noreferrer">
 							<MaterialSymbolsMail
-								class="mail-shadow h-10 w-10 transition-all hover:text-socials-mail" />
+								class="white-shadow h-10 w-10 transition-all hover:text-socials-mail" />
 						</a>
 					</div>
-					<UilMouseAlt class="h-14 w-14 animate-bounce" id="scrollIcon" />
+					<IcOutlineKeyboardArrowDown
+						class="h-14 w-14 animate-bounce"
+						id="scrollIcon" />
 				</div>
 			</div>
 		</div>
-		<div class="h-[5000px] w-full bg-white" />
 	</main>
 </div>
