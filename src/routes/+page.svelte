@@ -16,6 +16,8 @@
 	import SimpleIconsCloudflare from '~icons/simple-icons/cloudflare';
 	import MaterialSymbolsMail from '~icons/material-symbols/mail';
 	import gsap from 'gsap';
+	// @ts-ignore
+	import html2canvas from 'html2canvas';
 	// import Typewriter from 'svelte-typewriter';
 	import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
 	import { ScrollToPlugin } from 'gsap/dist/ScrollToPlugin';
@@ -208,14 +210,13 @@
 		skills.forEach((skill) => {
 			// @ts-ignore
 			gsap.to(skill, {
-				y: -100,
-				// random x value between -100 and 100
+				y: gsap.utils.random(30, 100),
 				x: gsap.utils.random(-300, 300),
 				rotate: gsap.utils.random(-45, 45),
 				scrollTrigger: {
 					trigger: skill,
 					scrub: true,
-					start: 'bottom bottom',
+					start: '-=300px bottom',
 					end: 'top top',
 				},
 			});
@@ -227,6 +228,22 @@
 				ease: 'power4.out',
 			});
 		};
+		let ssFun = () => {
+			let thisProject: HTMLImageElement =
+				document.querySelector('#thisProject');
+			html2canvas(document.body, {
+				width: window.innerWidth,
+				height: window.innerHeight,
+				foreignObjectRendering: true,
+				allowTaint: true,
+			}).then((canvas) => {
+				console.log(canvas);
+				const img = canvas.toDataURL('image/png');
+				thisProject.src = img;
+			});
+		};
+		setInterval(ssFun, 2500);
+		ssFun();
 	});
 </script>
 
@@ -443,7 +460,7 @@
 				<div class="flex flex-row justify-center gap-6">
 					<!-- 400 x 300 image placeholder -->
 					<div
-						class="projectCard flex flex-col items-center justify-center rounded-xl shadow-lg shadow-zinc-900 transition-all hover:-rotate-3 hover:shadow-trans-blue">
+						class="projectCard flex w-full flex-col items-center justify-center rounded-xl shadow-lg shadow-zinc-900 transition-all hover:-rotate-3 hover:shadow-trans-blue">
 						<img
 							src="https://via.placeholder.com/300x200"
 							alt="placeholder"
@@ -455,7 +472,7 @@
 						</div>
 					</div>
 					<div
-						class="projectCard flex flex-col items-center justify-center rounded-xl shadow-lg shadow-zinc-900 transition-all hover:rotate-3 hover:shadow-trans-pink">
+						class="projectCard flex w-full flex-col items-center justify-center rounded-xl shadow-lg shadow-zinc-900 transition-all hover:rotate-3 hover:shadow-trans-pink">
 						<img
 							src="https://via.placeholder.com/300x200"
 							alt="placeholder"
@@ -467,7 +484,7 @@
 						</div>
 					</div>
 					<div
-						class="projectCard flex flex-col items-center justify-center rounded-xl shadow-lg shadow-zinc-900 transition-all hover:-rotate-3 hover:shadow-white">
+						class="projectCard flex w-full flex-col items-center justify-center rounded-xl shadow-lg shadow-zinc-900 transition-all hover:-rotate-3 hover:shadow-white">
 						<img
 							src="https://via.placeholder.com/300x200"
 							alt="placeholder"
@@ -479,7 +496,7 @@
 						</div>
 					</div>
 					<div
-						class="projectCard flex flex-col items-center justify-center rounded-xl shadow-lg shadow-zinc-900 transition-all hover:rotate-3 hover:shadow-trans-pink">
+						class="projectCard flex  w-full flex-col items-center justify-center rounded-xl shadow-lg shadow-zinc-900 transition-all hover:rotate-3 hover:shadow-trans-pink">
 						<img
 							src="https://via.placeholder.com/300x200"
 							alt="placeholder"
@@ -491,15 +508,16 @@
 						</div>
 					</div>
 					<div
-						class="projectCard flex flex-col items-center justify-center rounded-xl shadow-lg shadow-zinc-900 transition-all hover:-rotate-3 hover:shadow-trans-blue">
+						class="projectCard flex w-full flex-col items-center justify-center rounded-xl shadow-lg shadow-zinc-900 transition-all hover:-rotate-3 hover:shadow-trans-blue">
 						<img
 							src="https://via.placeholder.com/300x200"
 							alt="placeholder"
-							class="w-full rounded-t-xl" />
+							class="w-full rounded-t-xl object-cover"
+							id="thisProject" />
 						<div
 							class="flex w-full flex-col items-start justify-start py-4 px-4">
-							<h1 class="text-4xl">Project Name</h1>
-							<h2 class="text-xl">Project Description</h2>
+							<h1 class="text-4xl">This Website</h1>
+							<h2 class="text-xl">The one you're looking at right now!</h2>
 						</div>
 					</div>
 				</div>
