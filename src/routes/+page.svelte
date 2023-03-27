@@ -206,13 +206,14 @@
 		});
 		const skills = gsap.utils.toArray('.skill');
 		skills.forEach((skill) => {
+			// @ts-ignore
 			gsap.to(skill, {
 				y: -100,
 				// random x value between -100 and 100
-				x: 'random(-100, 100)',
-				rotate: 'random(-90, 90)',
+				x: gsap.utils.random(-300, 300),
+				rotate: gsap.utils.random(-45, 45),
 				scrollTrigger: {
-					trigger: '.skill',
+					trigger: skill,
 					scrub: true,
 					start: 'bottom bottom',
 					end: 'top top',
