@@ -18,6 +18,7 @@
 	"devDependencies": {
 		"@iconify/json": "^2.2.39",
 		"@sveltejs/adapter-auto": "^2.0.0",
+		"@sveltejs/adapter-cloudflare": "^2.2.0",
 		"@typescript-eslint/eslint-plugin": "^5.50.0",
 		"@typescript-eslint/parser": "^5.50.0",
 		"autoprefixer": "^10.4.13",

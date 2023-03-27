@@ -370,62 +370,69 @@
 				<h2 class="text-6xl">I build great experiences</h2>
 			</div>
 		</div>
+		<div class="flex w-screen flex-col items-center justify-center px-12 py-24">
+			<h1 class="text-6xl">My Skills</h1>
+			<div class="flex flex-row justify-center p-4">
+				<div
+					class="h-40 w-32 rounded-xl border-2 border-neutral-700 bg-neutral-800" />
+			</div>
+		</div>
 		<div
 			class="projectsContainer flex h-screen w-screen flex-col justify-around px-12 py-24">
 			<h1 class="text-6xl">My Projects</h1>
 			<div class="flex flex-row justify-center gap-6">
 				<!-- 400 x 300 image placeholder -->
 				<div
-					class="projectCard s flex flex-col items-center justify-center shadow-lg shadow-zinc-900 transition-all hover:-rotate-3 hover:shadow-trans-blue">
+					class="projectCard flex flex-col items-center justify-center rounded-xl shadow-lg shadow-zinc-900 transition-all hover:-rotate-3 hover:shadow-trans-blue">
 					<img
 						src="https://via.placeholder.com/300x200"
 						alt="placeholder"
-						class="w-80" />
-					<div class="justify-startpy-4 flex w-full flex-col items-start px-4">
+						class="w-full rounded-t-xl" />
+					<div class="flex w-full flex-col items-start justify-start py-4 px-4">
 						<h1 class="text-4xl">Project Name</h1>
 						<h2 class="text-xl">Project Description</h2>
 					</div>
 				</div>
 				<div
-					class="projectCard s flex flex-col items-center justify-center shadow-lg shadow-zinc-900 transition-all hover:rotate-3 hover:shadow-trans-pink">
+					class="projectCard flex flex-col items-center justify-center rounded-xl shadow-lg shadow-zinc-900 transition-all hover:rotate-3 hover:shadow-trans-pink">
 					<img
 						src="https://via.placeholder.com/300x200"
 						alt="placeholder"
-						class="w-80" />
-					<div class="justify-startpy-4 flex w-full flex-col items-start px-4">
+						class="w-full rounded-t-xl" />
+					<div class="flex w-full flex-col items-start justify-start py-4 px-4">
 						<h1 class="text-4xl">Project Name</h1>
 						<h2 class="text-xl">Project Description</h2>
 					</div>
 				</div>
 				<div
-					class="projectCard s flex flex-col items-center justify-center shadow-lg shadow-zinc-900 transition-all hover:-rotate-3 hover:shadow-white">
+					class="projectCard flex flex-col items-center justify-center rounded-xl shadow-lg shadow-zinc-900 transition-all hover:-rotate-3 hover:shadow-white">
 					<img
 						src="https://via.placeholder.com/300x200"
 						alt="placeholder"
-						class="w-80" />
-					<div class="justify-startpy-4 flex w-full flex-col items-start px-4">
+						class="w-full rounded-t-xl" />
+					<div class="flex w-full flex-col items-start justify-start py-4 px-4">
 						<h1 class="text-4xl">Project Name</h1>
 						<h2 class="text-xl">Project Description</h2>
 					</div>
 				</div>
 				<div
-					class="projectCard s flex flex-col items-center justify-center shadow-lg shadow-zinc-900 transition-all hover:rotate-3 hover:shadow-trans-pink">
+					class="projectCard flex flex-col items-center justify-center rounded-xl shadow-lg shadow-zinc-900 transition-all hover:rotate-3 hover:shadow-trans-pink">
 					<img
 						src="https://via.placeholder.com/300x200"
 						alt="placeholder"
-						class="w-80" />
-					<div class="justify-startpy-4 flex w-full flex-col items-start px-4">
+						class="w-full rounded-t-xl" />
+					<div class="flex w-full flex-col items-start justify-start py-4 px-4">
 						<h1 class="text-4xl">Project Name</h1>
 						<h2 class="text-xl">Project Description</h2>
 					</div>
 				</div>
 				<div
-					class="projectCard s flex flex-col items-center justify-center shadow-lg shadow-zinc-900 transition-all hover:-rotate-3 hover:shadow-trans-blue">
+					class="projectCard flex flex-col items-center justify-center rounded-xl shadow-lg shadow-zinc-900 transition-all hover:-rotate-3 hover:shadow-trans-blue">
 					<img
 						src="https://via.placeholder.com/300x200"
 						alt="placeholder"
-						class="w-80" />
-					<div class="justify-startpy-4 flex w-full flex-col items-start px-4">
+						class="w-full rounded-t-xl" />
+					<div class="flex w-full flex-col items-start justify-start py-4 px-4">
 						<h1 class="text-4xl">Project Name</h1>
 						<h2 class="text-xl">Project Description</h2>
 					</div>
