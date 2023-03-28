@@ -25,8 +25,22 @@
 	gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
 	let timeline: GSAPTimeline;
 	let loaded = false;
-	let loadAnimFinished = true;
+	let loadAnimFinished = false;
 	let navVisible = false;
+
+	const handleAnchorScroll = (e) => {
+		const link = e.currentTarget;
+		const id = new URL(link.href).hash.replace('#', '');
+		const target = document.getElementById(id);
+		console.log(e, link, id, target);
+		if (target) {
+			window.scrollTo({
+				top: target.offsetTop,
+				behavior: 'smooth',
+			});
+		}
+	};
+
 	onMount(() => {
 		loaded = true;
 		timeline = gsap.timeline();
@@ -43,7 +57,10 @@
 				y: -100,
 				opacity: 0,
 				delay: 0,
-				stagger: 0.2,
+				stagger: {
+					amount: 1,
+					from: 'random',
+				},
 				ease: 'power4.out',
 			})
 			.from(
@@ -58,37 +75,10 @@
 				'>-0.5'
 			);
 		timeline.to('#lettere1', {
-			duration: 1,
+			duration: 0.5,
 			color: '#5bcefa',
 			ease: 'power4.out',
 		});
-		timeline.to(
-			'#letterm',
-			{
-				duration: 0.5,
-				color: '#f5a9b8',
-				ease: 'power4.out',
-			},
-			'>-0.25'
-		);
-		timeline.to(
-			'#letterb',
-			{
-				duration: 0.5,
-				color: '#fff',
-				ease: 'power4.out',
-			},
-			'>-0.25'
-		);
-		timeline.to(
-			'#lettere2',
-			{
-				duration: 0.5,
-				color: '#f5a9b8',
-				ease: 'power4.out',
-			},
-			'>-0.25'
-		);
 		timeline.to(
 			'#letterd',
 			{
@@ -96,8 +86,27 @@
 				color: '#5bcefa',
 				ease: 'power4.out',
 			},
-			'>-0.25'
+			'-=0.5'
 		);
+		timeline.to('#letterm', {
+			duration: 0.5,
+			color: '#f5a9b8',
+			ease: 'power4.out',
+		});
+		timeline.to(
+			'#lettere2',
+			{
+				duration: 0.5,
+				color: '#f5a9b8',
+				ease: 'power4.out',
+			},
+			'-=0.5'
+		);
+		timeline.to('#letterb', {
+			duration: 0.5,
+			color: '#fff',
+			ease: 'power4.out',
+		});
 
 		timeline.from(
 			'.social',
@@ -146,7 +155,7 @@
 				scrollTrigger: {
 					trigger: '.bigText',
 					scrub: true,
-					start: 'center center',
+					start: 'center 75%',
 					end: '+=500px',
 				},
 			})
@@ -155,7 +164,7 @@
 				scrollTrigger: {
 					trigger: '.bigText',
 					scrub: true,
-					start: 'center center',
+					start: 'center 75%',
 					end: '+=500px',
 				},
 			})
@@ -164,7 +173,7 @@
 				scrollTrigger: {
 					trigger: '.bigText',
 					scrub: true,
-					start: 'center center',
+					start: 'center 75%',
 					end: '+=500px',
 				},
 			});
@@ -174,7 +183,7 @@
 				scrollTrigger: {
 					trigger: '.smallText',
 					scrub: true,
-					start: 'center center',
+					start: 'center 75%',
 					end: '+=500px',
 				},
 			})
@@ -183,7 +192,7 @@
 				scrollTrigger: {
 					trigger: '.smallText',
 					scrub: true,
-					start: 'center center',
+					start: 'center 75%',
 					end: '+=500px',
 				},
 			})
@@ -192,7 +201,7 @@
 				scrollTrigger: {
 					trigger: '.smallText',
 					scrub: true,
-					start: 'center center',
+					start: 'center 75%',
 					end: '+=500px',
 				},
 			});
@@ -228,22 +237,6 @@
 				ease: 'power4.out',
 			});
 		};
-		let ssFun = () => {
-			let thisProject: HTMLImageElement =
-				document.querySelector('#thisProject');
-			html2canvas(document.body, {
-				width: window.innerWidth,
-				height: window.innerHeight,
-				foreignObjectRendering: true,
-				allowTaint: true,
-			}).then((canvas) => {
-				console.log(canvas);
-				const img = canvas.toDataURL('image/png');
-				thisProject.src = img;
-			});
-		};
-		setInterval(ssFun, 2500);
-		ssFun();
 	});
 </script>
 
@@ -254,13 +247,19 @@
 	</div>
 {/if}
 
-<div class="h-screen w-screen" class:overflow-hidden={!loadAnimFinished}>
+<div
+	class="h-screen w-screen bg-black text-white"
+	class:overflow-hidden={!loadAnimFinished}
+	id="contain">
 	{#if navVisible}
 		<nav
-			class="fixed top-0 left-0 z-40 h-20 w-full bg-transparent text-white"
+			class="fixed top-0 left-0 z-40 h-20 w-full bg-transparent"
 			transition:fade>
 			<div class="flex flex-row items-center justify-between px-6 py-4">
-				<h1 class="white-shadow navItem text-2xl transition-all">embed</h1>
+				<a
+					class="white-shadow navItem text-2xl transition-all"
+					href="#top"
+					on:click|preventDefault={handleAnchorScroll}>embed</a>
 				<div class="flex flex-row justify-around gap-6">
 					<a
 						href="https://twitter.com/uwunetes"
@@ -306,8 +305,8 @@
 			</div>
 		</nav>
 	{/if}
-	<main class={`h-[6000vh] w-screen bg-black text-white`}>
-		<div class="h-screen w-full">
+	<main class={`h-[6000vh] w-screen bg-transparent`}>
+		<div class="h-screen w-full" id="top">
 			<div
 				class="bothText flex h-screen w-full flex-col items-center justify-center gap-2 text-center">
 				<div class="flex h-full flex-col items-center justify-end">
@@ -391,21 +390,24 @@
 		</div>
 		<div>
 			<div
-				class="aboutText flex h-[500px] w-screen flex-col items-center justify-center overflow-y-scroll">
+				class="aboutText flex h-[500px] w-screen flex-col items-center justify-center overflow-y-scroll text-center">
 				<h1 class="text-6xl">👋! I'm embed!</h1>
 				<h2>I am a full stack web developer from Connecticut, US</h2>
 			</div>
-			<div class="flex h-[500px] w-screen flex-col items-center justify-center">
+			<div
+				class="flex h-[500px] w-screen flex-col items-center justify-center text-center">
 				<h1 class="bigTop text-4xl">I build a lot of</h1>
 				<h2 class="bigText text-6xl">BIG</h2>
 				<h3 class="bigBottom text-4xl">projects</h3>
 			</div>
-			<div class="flex h-[500px] w-screen flex-col items-center justify-center">
+			<div
+				class="flex h-[500px] w-screen flex-col items-center justify-center text-center">
 				<h1 class="smallTop text-4xl">and some</h1>
 				<h2 class="smallText text-6xl">small</h2>
 				<h3 class="smallBottom text-4xl">bots</h3>
 			</div>
-			<div class="flex h-[500px] w-screen flex-col items-center justify-center">
+			<div
+				class="flex h-[500px] w-screen flex-col items-center justify-center text-center">
 				<h1 class="text-4xl">but most of all,</h1>
 				<h2 class="text-6xl">I build great experiences</h2>
 			</div>
@@ -455,9 +457,9 @@
 				</div>
 			</div>
 			<div
-				class="projectsContainer flex h-screen w-screen flex-col justify-around px-12 py-24">
+				class="projectsContainer flex h-screen w-screen flex-col items-center justify-center px-12 py-24">
 				<h1 class="text-6xl">My Projects</h1>
-				<div class="flex flex-row justify-center gap-6">
+				<div class="flex w-screen flex-row justify-center gap-6 py-4 px-6">
 					<!-- 400 x 300 image placeholder -->
 					<div
 						class="projectCard flex w-full flex-col items-center justify-center rounded-xl shadow-lg shadow-zinc-900 transition-all hover:-rotate-3 hover:shadow-trans-blue">
