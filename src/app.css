@@ -43,3 +43,11 @@ html {
 .trans-shadow-white:hover {
     filter: drop-shadow(0 0 2.5px #fff);
 }
+
+.bubblez-proj-card {
+    background-image: linear-gradient(to bottom, transparent, #000 35%), url("/assets/bubblez.jpg");
+    background-size: contain;
+    /* background-repeat: no-repeat; */
+    background-position-x: center;
+    background-size: 100%
+}

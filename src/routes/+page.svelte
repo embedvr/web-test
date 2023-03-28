@@ -11,10 +11,14 @@
 	import SimpleIconsHtml5 from '~icons/simple-icons/html5';
 	import CibCss3Shiled from '~icons/cib/css3-shiled';
 	import SimpleIconsJavascript from '~icons/simple-icons/javascript';
+	import SimpleIconsTailwindcss from '~icons/simple-icons/tailwindcss';
 	import SimpleIconsTypescript from '~icons/simple-icons/typescript';
 	import VscodeIconsFileTypeDeno from '~icons/vscode-icons/file-type-deno';
 	import SimpleIconsCloudflare from '~icons/simple-icons/cloudflare';
 	import MaterialSymbolsMail from '~icons/material-symbols/mail';
+	import IcRoundKeyboardArrowLeft from '~icons/ic/round-keyboard-arrow-left';
+	import IcRoundKeyboardArrowRight from '~icons/ic/round-keyboard-arrow-right';
+	import IconoirOpenNewWindow from '~icons/iconoir/open-new-window';
 	import gsap from 'gsap';
 	// @ts-ignore
 	import html2canvas from 'html2canvas';
@@ -25,7 +29,7 @@
 	gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
 	let timeline: GSAPTimeline;
 	let loaded = false;
-	let loadAnimFinished = false;
+	let loadAnimFinished = true;
 	let navVisible = false;
 
 	const handleAnchorScroll = (e) => {
@@ -205,14 +209,24 @@
 					end: '+=500px',
 				},
 			});
-		timeline.to('.projectsContainer', {
+		timeline.to('.projectHeading', {
 			y: -100,
+			scrollTrigger: {
+				trigger: '.projectHeading',
+				pin: true,
+				scrub: true,
+				start: 'center center',
+				end: '+=500px',
+			},
+		});
+		timeline.to('.projectsContainer', {
+			// y: -100,
 			scrollTrigger: {
 				trigger: '.projectsContainer',
 				pin: true,
 				scrub: true,
 				start: 'center center',
-				end: '+=500px',
+				end: '+=1500px',
 			},
 		});
 		const skills = gsap.utils.toArray('.skill');
@@ -253,7 +267,7 @@
 	id="contain">
 	{#if navVisible}
 		<nav
-			class="fixed top-0 left-0 z-40 h-20 w-full bg-transparent"
+			class="fixed top-0 left-0 z-40 h-20 w-full bg-black bg-opacity-75"
 			transition:fade>
 			<div class="flex flex-row items-center justify-between px-6 py-4">
 				<a
@@ -392,7 +406,9 @@
 			<div
 				class="aboutText flex h-[500px] w-screen flex-col items-center justify-center overflow-y-scroll text-center">
 				<h1 class="text-6xl">👋! I'm embed!</h1>
-				<h2>I am a full stack web developer from Connecticut, US</h2>
+				<h2 class="text-lg">
+					I am a full stack web developer from Connecticut, US
+				</h2>
 			</div>
 			<div
 				class="flex h-[500px] w-screen flex-col items-center justify-center text-center">
@@ -432,6 +448,11 @@
 				</div>
 				<div
 					class="skill flex h-40 w-32 flex-col items-center justify-evenly rounded-xl border-2 border-neutral-700 bg-neutral-800">
+					<SimpleIconsTailwindcss class="text-5xl" />
+					<span class="text-3xl">Tailwind</span>
+				</div>
+				<div
+					class="skill flex h-40 w-32 flex-col items-center justify-evenly rounded-xl border-2 border-neutral-700 bg-neutral-800">
 					<SimpleIconsJavascript class="text-5xl" />
 					<span class="text-2xl">JavaScript</span>
 				</div>
@@ -451,17 +472,74 @@
 					<span class="text-xl">CF Workers</span>
 				</div>
 				<div
-					class="skill flex h-40 w-32 flex-col items-center justify-evenly rounded-xl border-2 border-neutral-700 bg-neutral-800">
+					class="skill z-10 flex h-40 w-32 flex-col items-center justify-evenly rounded-xl border-2 border-neutral-700 bg-neutral-800">
 					<IcSharpDiscord class="text-5xl" />
 					<span class="text-xl">Discord.js</span>
 				</div>
 			</div>
 			<div
-				class="projectsContainer flex h-screen w-screen flex-col items-center justify-center px-12 py-24">
-				<h1 class="text-6xl">My Projects</h1>
-				<div class="flex w-screen flex-row justify-center gap-6 py-4 px-6">
-					<!-- 400 x 300 image placeholder -->
+				class="projectHeading flex h-screen w-screen flex-col items-center justify-center px-12 py-24">
+				<h2 class="text-4xl">Take a look at</h2>
+				<h3 class="text-5xl">some</h3>
+				<h4 class="text-4xl">of my previous work</h4>
+			</div>
+			<div
+				class="projectsContainer flex h-screen w-screen flex-row items-center justify-between px-12 py-24">
+				<btn
+					class="z-20 flex h-16 w-16 cursor-pointer flex-row items-center justify-center rounded-full border-neutral-700 bg-neutral-800 transition-all hover:bg-white hover:text-black">
+					<IcRoundKeyboardArrowLeft class="text-4xl" />
+				</btn>
+				<div
+					class="fixed top-0 left-0 flex h-screen w-screen flex-row items-center justify-center py-24 px-12">
 					<div
+						class="bubblez-proj-card  mx-4 my-4 flex h-full w-full flex-col items-center justify-center gap-5 rounded-xl">
+						<h2 class="text-6xl">Bubblez</h2>
+						<div class="flex flex-row items-center justify-center gap-6">
+							<a
+								href="https://next.bubblez.app"
+								class="rounded-xl border border-neutral-700 bg-neutral-800 px-4 py-2 transition-all hover:border-neutral-400 hover:bg-neutral-600">
+								<span
+									class="flex flex-row items-center justify-center gap-2 text-xl"
+									>Go <IconoirOpenNewWindow /></span>
+							</a>
+						</div>
+						<div class="flex flex-row items-center justify-center gap-6">
+							<div
+								class="flex h-40 w-32 flex-col items-center justify-evenly rounded-xl border-2 border-neutral-700 bg-neutral-800">
+								<CarbonLogoSvelte class="text-5xl" />
+								<span class="text-3xl">Svelte</span>
+							</div>
+							<div
+								class="flex h-40 w-32 flex-col items-center justify-evenly rounded-xl border-2 border-neutral-700 bg-neutral-800">
+								<SimpleIconsTailwindcss class="text-5xl" />
+								<span class="text-3xl">Tailwind</span>
+							</div>
+							<div
+								class="flex h-40 w-32 flex-col items-center justify-evenly rounded-xl border-2 border-neutral-700 bg-neutral-800">
+								<SimpleIconsJavascript class="text-5xl" />
+								<span class="text-2xl">JavaScript</span>
+							</div>
+							<div
+								class="flex h-40 w-32 flex-col items-center justify-evenly rounded-xl border-2 border-neutral-700 bg-neutral-800">
+								<SimpleIconsTypescript class="text-5xl" />
+								<span class="text-2xl">TypeScript</span>
+							</div>
+							<div
+								class="flex h-40 w-32 flex-col items-center justify-evenly rounded-xl border-2 border-neutral-700 bg-neutral-800">
+								<SimpleIconsCloudflare class="text-5xl" />
+								<span class="text-xl">CF Workers</span>
+							</div>
+						</div>
+					</div>
+				</div>
+				<btn
+					class="z-20 flex h-16 w-16 cursor-pointer flex-row items-center justify-center rounded-full border-neutral-700 bg-neutral-800 transition-all hover:bg-white hover:text-black">
+					<IcRoundKeyboardArrowRight class="text-4xl" />
+				</btn>
+				<!-- <h1 class="absolute top-24 left-12 text-6xl">My Projects</h1> -->
+				<!-- <div
+					class="flex h-screen w-screen flex-row justify-center gap-6 py-4 px-6"> -->
+				<!-- <div
 						class="projectCard flex w-full flex-col items-center justify-center rounded-xl shadow-lg shadow-zinc-900 transition-all hover:-rotate-3 hover:shadow-trans-blue">
 						<img
 							src="https://via.placeholder.com/300x200"
@@ -521,8 +599,8 @@
 							<h1 class="text-4xl">This Website</h1>
 							<h2 class="text-xl">The one you're looking at right now!</h2>
 						</div>
-					</div>
-				</div>
+					</div> -->
+				<!-- </div> -->
 			</div>
 		</div>
 	</main>

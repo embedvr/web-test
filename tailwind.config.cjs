@@ -22,6 +22,9 @@ module.exports = {
 				"osu-shadow": "drop-shadow(0 0 2px #FF66AA)",
 				"discord-shadow": "drop-shadow(0 0 2px #7289DA)",
 				"mail-shadow": "drop-shadow(0 0 2px #fff)",
+			},
+			backgroundImage: {
+				"bubblez": "url('/assets/bubblez.jpg')"
 			}
 		},
 	},
