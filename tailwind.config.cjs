@@ -24,7 +24,16 @@ module.exports = {
 				"mail-shadow": "drop-shadow(0 0 2px #fff)",
 			},
 			backgroundImage: {
-				"bubblez": "url('/assets/bubblez.jpg')"
+				"bubblez": "url('/assets/bubblez.jpg')",
+				"bubblez-gif": "url('https://via.placeholder.com/1920x1080')",
+				"placeholder": "url('https://via.placeholder.com/1920x1080')",
+				"placeholder-gif": "url('https://via.placeholder.com/1920x1080')",
+			},
+			gridTemplateColumns: {
+				"4": "repeat(4, 1fr)",
+			},
+			boxShadow: {
+				"black-overlay": "inset 0 0 0 2000px rgba(0, 0, 0, 0.5)",
 			}
 		},
 	},

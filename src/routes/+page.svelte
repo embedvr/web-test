@@ -453,9 +453,9 @@
 				class="projectsContainer flex h-screen w-screen items-center justify-center px-12 py-24">
 				<div class="py-23 grid h-full w-full grid-cols-4 grid-rows-2 gap-4">
 					<ProjectCard
-						name="Placeholder"
-						image="https://via.placeholder.com/800x700"
-						hoverImage="https://via.placeholder.com/800x700"
+						name="Bubblez"
+						image="/assets/bubblez.jpg"
+						hoverImage="/assets/bubblez.webp"
 						tech={['svelte', 'ts']}
 						class="col-span-2 row-span-2"
 						link="https://example.com"

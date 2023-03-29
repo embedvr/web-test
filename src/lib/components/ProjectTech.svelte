@@ -15,23 +15,23 @@
 </script>
 
 {#if tech == 'svelte'}
-	<CarbonLogoSvelte class={`text-5xl ${classP}`} />
+	<CarbonLogoSvelte class={`${classP}`} />
 {:else if tech == 'html'}
-	<SimpleIconsHtml5 class={`text-5xl ${classP}`} />
+	<SimpleIconsHtml5 class={`${classP}`} />
 {:else if tech == 'css'}
-	<CibCss3Shiled class={`text-5xl ${classP}`} />
+	<CibCss3Shiled class={`${classP}`} />
 {:else if tech == 'tailwind'}
-	<SimpleIconsTailwindcss class={`text-5xl ${classP}`} />
+	<SimpleIconsTailwindcss class={`${classP}`} />
 {:else if tech == 'js'}
-	<SimpleIconsJavascript class={`text-5xl ${classP}`} />
+	<SimpleIconsJavascript class={`${classP}`} />
 {:else if tech == 'ts'}
-	<SimpleIconsTypescript class={`text-5xl ${classP}`} />
+	<SimpleIconsTypescript class={`${classP}`} />
 {:else if tech == 'deno'}
-	<VscodeIconsFileTypeDeno class={`text-5xl ${classP}`} />
+	<VscodeIconsFileTypeDeno class={`${classP}`} />
 {:else if tech == 'cfw'}
-	<SimpleIconsCloudflare class={`text-5xl ${classP}`} />
+	<SimpleIconsCloudflare class={`${classP}`} />
 {:else if tech == 'djs'}
-	<IcSharpDiscord class={`text-5xl ${classP}`} />
+	<IcSharpDiscord class={`${classP}`} />
 {:else if tech == 'gsap'}
-	<SimpleIconsGreensock class={`text-5xl ${classP}`} />
+	<SimpleIconsGreensock class={`${classP}`} />
 {/if}
