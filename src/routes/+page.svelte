@@ -222,7 +222,7 @@
 			},
 		});
 		timeline.to('.projectsContainer', {
-			y: -100,
+			// y: -100,
 			scrollTrigger: {
 				trigger: '.projectsContainer',
 				pin: true,
@@ -454,20 +454,18 @@
 				<div class="py-23 grid h-full w-full grid-cols-4 grid-rows-2 gap-4">
 					<ProjectCard
 						name="Bubblez"
-						image="/assets/bubblez.jpg"
+						image="/assets/bubblez.png"
 						hoverImage="/assets/bubblez.webp"
-						tech={['svelte', 'ts']}
+						tech={['svelte', 'html', 'ts', 'tailwind', 'cfw']}
 						class="col-span-2 row-span-2"
-						link="https://example.com"
-						code="https://example.org" />
+						link="https://next.bubblez.app" />
 					<ProjectCard
-						name="Placeholder"
-						image="https://via.placeholder.com/800x700"
-						hoverImage="https://via.placeholder.com/800x700"
-						tech={['svelte', 'ts']}
+						name="WhitelistSMP"
+						image="/assets/whitelist.png"
+						hoverImage="/assets/whitelist.webp"
+						tech={['svelte', 'html', 'ts', 'tailwind', 'cfw']}
 						class="col-span-1 row-span-1"
-						link="https://example.com"
-						code="https://example.org" />
+						link="https://whitelistsmp.net" />
 					<ProjectCard
 						name="Placeholder"
 						image="https://via.placeholder.com/800x700"
