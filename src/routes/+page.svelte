@@ -456,14 +456,14 @@
 						name="Bubblez"
 						image="/assets/bubblez.png"
 						hoverImage="/assets/bubblez.webp"
-						tech={['svelte', 'html', 'ts', 'tailwind', 'cfw']}
+						tech={['svelte', 'ts', 'tailwind', 'cfw']}
 						class="col-span-2 row-span-2"
 						link="https://next.bubblez.app" />
 					<ProjectCard
 						name="WhitelistSMP"
 						image="/assets/whitelist.png"
 						hoverImage="/assets/whitelist.webp"
-						tech={['svelte', 'html', 'ts', 'tailwind', 'cfw']}
+						tech={['svelte', 'ts', 'tailwind', 'cfw']}
 						class="col-span-1 row-span-1"
 						link="https://whitelistsmp.net" />
 					<ProjectCard
