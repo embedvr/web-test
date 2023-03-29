@@ -31,7 +31,7 @@
 	gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
 	let timeline: GSAPTimeline;
 	let loaded = false;
-	let loadAnimFinished = true;
+	let loadAnimFinished = false;
 	let navVisible = false;
 
 	const handleAnchorScroll = (e) => {
@@ -467,24 +467,24 @@
 						class="col-span-1 row-span-1"
 						link="https://whitelistsmp.net" />
 					<ProjectCard
-						name="Placeholder"
-						image="https://via.placeholder.com/800x700"
+						name="| I"
+						image="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQIW2NgYGD4DwABBAEAwS2OUAAAAABJRU5ErkJggg=="
 						hoverImage="https://via.placeholder.com/800x700"
 						tech={['svelte', 'ts']}
 						class="col-span-1 row-span-1"
 						link="https://example.com"
 						code="https://example.org" />
 					<ProjectCard
-						name="Placeholder"
-						image="https://via.placeholder.com/800x700"
+						name="| |"
+						image="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQIW2NgYGD4DwABBAEAwS2OUAAAAABJRU5ErkJggg=="
 						hoverImage="https://via.placeholder.com/800x700"
 						tech={['svelte', 'ts']}
 						class="col-span-1 row-span-1"
 						link="https://example.com"
 						code="https://example.org" />
 					<ProjectCard
-						name="Placeholder"
-						image="https://via.placeholder.com/800x700"
+						name="| _"
+						image="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQIW2NgYGD4DwABBAEAwS2OUAAAAABJRU5ErkJggg=="
 						hoverImage="https://via.placeholder.com/800x700"
 						tech={['svelte', 'ts']}
 						class="col-span-1 row-span-1"
