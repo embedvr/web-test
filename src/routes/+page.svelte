@@ -467,7 +467,7 @@
 						class="col-span-1 row-span-1"
 						link="https://whitelistsmp.net" />
 					<ProjectCard
-						name="| I"
+						name="Placeholder"
 						image="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQIW2NgYGD4DwABBAEAwS2OUAAAAABJRU5ErkJggg=="
 						hoverImage="https://via.placeholder.com/800x700"
 						tech={['svelte', 'ts']}
@@ -475,7 +475,7 @@
 						link="https://example.com"
 						code="https://example.org" />
 					<ProjectCard
-						name="| |"
+						name="Placeholder"
 						image="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQIW2NgYGD4DwABBAEAwS2OUAAAAABJRU5ErkJggg=="
 						hoverImage="https://via.placeholder.com/800x700"
 						tech={['svelte', 'ts']}
@@ -483,7 +483,7 @@
 						link="https://example.com"
 						code="https://example.org" />
 					<ProjectCard
-						name="| _"
+						name="Placeholder"
 						image="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQIW2NgYGD4DwABBAEAwS2OUAAAAABJRU5ErkJggg=="
 						hoverImage="https://via.placeholder.com/800x700"
 						tech={['svelte', 'ts']}
