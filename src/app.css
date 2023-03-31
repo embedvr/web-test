@@ -10,6 +10,7 @@
             
 html {
     background-color: #000;
+    color: #fff;
     overflow-x: hidden;
 }
 
@@ -51,4 +52,13 @@ html {
     /* background-repeat: no-repeat; */
     background-position-x: center;
     background-size: 100%
+}
+
+.gradientText {
+    background: linear-gradient(135deg, #5bcefa 0%,#f5a9b8 25%,#ffffff 50%,#f5a9b8 75%,#5bcefa 100%);
+    padding: 5px;
+    overflow: visible;
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
 }

@@ -4,4 +4,8 @@
 	import '../app.css';
 </script>
 
-<slot />
+<div id="smooth-wrapper">
+	<div id="smooth-content">
+		<slot />
+	</div>
+</div>
