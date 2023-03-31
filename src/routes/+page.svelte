@@ -256,6 +256,10 @@
 	});
 </script>
 
+<svelte:head>
+	<title>embed &#60;3</title>
+</svelte:head>
+
 {#if !loaded}
 	<div
 		class="z-50 flex h-screen w-screen flex-col items-center justify-center bg-black text-white">
@@ -263,10 +267,7 @@
 	</div>
 {/if}
 
-<div
-	class="h-screen w-screen bg-black text-white"
-	class:overflow-hidden={!loadAnimFinished}
-	id="contain">
+<div class="h-screen w-screen bg-black text-white" id="contain">
 	{#if navVisible}
 		<nav
 			class="fixed top-0 left-0 z-40 h-20 w-full bg-black bg-opacity-75"
@@ -321,8 +322,8 @@
 			</div>
 		</nav>
 	{/if}
-	<main class={`h-[6000vh] w-screen bg-transparent`}>
-		<div class="h-screen w-full" id="top">
+	<main class={`w-screen bg-transparent`}>
+		<div class="h-screen w-full " id="top">
 			<div
 				class="bothText flex h-screen w-full flex-col items-center justify-center gap-2 text-center">
 				<div class="flex h-full flex-col items-center justify-end">
