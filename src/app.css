@@ -56,7 +56,7 @@ html {
 
 .gradientText {
     background: linear-gradient(135deg, #5bcefa 0%,#f5a9b8 25%,#ffffff 50%,#f5a9b8 75%,#5bcefa 100%);
-    padding: 5px;
+    padding: 10px;
     overflow: visible;
     -webkit-text-fill-color: transparent;
     -webkit-background-clip: text;
