@@ -71,39 +71,39 @@
 				},
 				'>-0.5'
 			)
-// 			.to('#lettere1', {
-// 				duration: 0.5,
-// 				color: '#5bcefa',
-// 				ease: 'power4.out',
-// 			})
-// 			.to(
-// 				'#letterd',
-// 				{
-// 					duration: 0.5,
-// 					color: '#5bcefa',
-// 					ease: 'power4.out',
-// 				},
-// 				'-=0.5'
-// 			)
-// 			.to('#letterm', {
-// 				duration: 0.5,
-// 				color: '#f5a9b8',
-// 				ease: 'power4.out',
-// 			})
-// 			.to(
-// 				'#lettere2',
-// 				{
-// 					duration: 0.5,
-// 					color: '#f5a9b8',
-// 					ease: 'power4.out',
-// 				},
-// 				'-=0.5'
-// 			)
-// 			.to('#letterb', {
-// 				duration: 0.5,
-// 				color: '#fff',
-// 				ease: 'power4.out',
-// 			})
+			.to('#lettere1', {
+				duration: 0.5,
+				color: '#5bcefa',
+				ease: 'power4.out',
+			})
+			.to(
+				'#letterd',
+				{
+					duration: 0.5,
+					color: '#5bcefa',
+					ease: 'power4.out',
+				},
+				'-=0.5'
+			)
+			.to('#letterm', {
+				duration: 0.5,
+				color: '#f5a9b8',
+				ease: 'power4.out',
+			})
+			.to(
+				'#lettere2',
+				{
+					duration: 0.5,
+					color: '#f5a9b8',
+					ease: 'power4.out',
+				},
+				'-=0.5'
+			)
+			.to('#letterb', {
+				duration: 0.5,
+				color: '#fff',
+				ease: 'power4.out',
+			})
 			.from(
 				'.social',
 				{
